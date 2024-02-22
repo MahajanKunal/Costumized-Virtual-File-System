@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Total Price Calculator</title>
+  <script>
+    function calculateTotal() {
+      var itemQuantity = parseInt(document.getElementById("quantity").value);
+      var itemPrice = parseFloat(document.getElementById("price").value);
+      var totalPrice = itemQuantity * itemPrice;
+      document.getElementById("total").innerHTML = "Total Price: " + totalPrice.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Total Price Calculator</h1>
+  <label for="quantity">Quantity:</label>
+  <input type="number" id="quantity" /><br><br>
+  <label for="price">Price:</label>
+  <input type="number" id="price" step="0.01" /><br><br>
+  <button onclick="calculateTotal()">Calculate</button>
+  <p id="total"></p>
+</body>
+</html>
